@@ -1,0 +1,445 @@
+
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+.contactContainer{
+    display: grid;
+    grid-template-columns: 70rem auto;
+    
+    
+    grid-template-rows: 70rem;
+    margin: 0 auto;
+    justify-items: start;
+    
+    align-content: center;
+    align-items: center;
+   
+    width: 120rem;
+    height: 100%;
+ 
+  
+}
+
+
+.contactContainer .contactInformation{
+    grid-area: 1/1;
+    display: grid;
+  
+
+    grid-template-columns: auto;
+    grid-template-rows: 3rem 17rem auto;
+    align-content: center;
+    
+
+}
+
+.contactContainer .contactInformation .circlesContainer{
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-90deg);
+    width: fit-content;
+    
+    gap: 1rem;
+}
+
+
+.contactContainer .contactInformation .circlesContainer .circle:nth-child(1) img{
+    width: 4rem;
+    opacity: 0;
+    animation: fadeInRight 0.3s forwards;
+
+}
+
+.contactContainer .contactInformation .circlesContainer .circle:nth-child(2) img{
+    width: 3rem;
+    position: relative;
+    left: 5px;
+    opacity: 0;
+    animation: fadeInRight 0.3s forwards;
+    animation-delay: 0.1s;
+
+}
+
+.contactContainer .contactInformation .circlesContainer .circle:nth-child(3) img{
+    position: relative;
+    left: 8px;
+    width: 2.5rem;
+    opacity: 0;
+    animation: fadeInRight 0.3s forwards;
+    animation-delay: 0.2s;
+
+}
+.contactContainer .contactInformation .title{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+
+.contactContainer .contactInformation .title p{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+    line-height: 14px;
+    
+    
+    flex-wrap: nowrap;
+
+}
+
+
+.contactContainer .contactInformation .title h1{
+    font-size: 3.4rem;
+    font-weight: 500;
+    flex-wrap: nowrap;
+    width: 45rem;
+    margin: 0;
+}
+
+.contactContainer .contactInformation span{
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+    color: #4590db;
+
+
+}
+
+
+.contactContainer .contactInformation .contactDescription p{
+    
+    line-height: 2rem;
+    font-size: 1.3rem;
+    color:#777777;
+    transition: 0.3s ease-in-out;
+    width: 56rem;
+    flex-wrap: nowrap;
+}
+
+
+
+.contactContainer .contactInformation .contactIcons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    gap: 2px;
+}
+
+.contactContainer .contactInformation .contactIcons img{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: 0px;
+    transition: 0.3s ease-in-out;
+
+}
+
+
+.contactContainer .contactInformation .contactIcons img:hover{
+    cursor: pointer;
+    top: -2px;
+}
+
+
+.contactContainer .contactInformation .contactIcons img:nth-child(3){
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+
+
+.contactContainer .contactInformation .contactIcons img:nth-child(4){
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 4px;
+}
+
+
+
+.contactContainer .contactInformation .projectShowcase{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 2%;
+
+
+}
+
+
+.contactContainer .contactInformation .projectShowcase img{
+    width: 50rem;
+    
+}
+
+
+
+
+.contactContainer .contactForm{
+    grid-area: 1/2;
+
+}
+
+.contactContainer .contactForm  form{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5rem 5rem 5rem 14rem 3rem auto;
+    border: none;
+    border-radius: 20px;
+    width: 40rem;
+    height: 90%;
+    box-sizing: border-box;
+    background-color: #ffffff04;
+    padding: 15px;
+    gap: 2rem;
+   
+    
+    
+    color: #777777;
+    font-weight: 500;
+
+
+}
+
+
+.contactContainer .contactForm  .nameInputContainer{
+    grid-row: 1;
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+.contactContainer .contactForm .nameInputContainer .nameInput input{
+    width: 100%;
+    height: 4rem;
+    border-radius: 18px;
+    border: none;
+    padding-left: 2rem;
+    background-color: #a0bbd63f;
+    box-sizing: border-box;
+    
+}
+
+.contactContainer .contactForm  .emailInputInvalid{
+    grid-row: 2;
+    
+
+}
+
+
+.contactContainer .contactForm  .emailInputInvalid p span{
+    color: red;
+    
+
+}
+
+
+.contactContainer .contactForm  .emailInputInvalid input{
+    grid-row: 2; 
+    width: 100%;
+    height: 4rem;
+    border-radius: 18px;
+    border: none;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    background-color: #a0bbd63f;
+    
+
+}
+
+
+.contactContainer .contactForm  .emailInputInvalid input::placeholder{
+    color: rgba(110, 109, 109, 0.753);
+}
+
+
+
+
+
+.contactContainer .contactForm  .emailInputValid{
+    grid-row: 2;
+    
+
+}
+
+
+.contactContainer .contactForm  .emailInputValid p{
+    color: green;
+}
+.contactContainer .contactForm  .emailInputValid p span{
+    
+    display: none;
+    
+
+}
+
+
+.contactContainer .contactForm  .emailInputValid input{
+    grid-row: 2; 
+    width: 100%;
+    height: 4rem;
+    border-radius: 18px;
+    border: none;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    background-color: #a0bbd63f;
+    
+
+}
+
+
+.contactContainer .contactForm  .emailInputValid input::placeholder{
+    color: rgba(110, 109, 109, 0.753);
+}
+
+
+
+.contactContainer .contactForm  .subjectInput{
+    grid-row: 3; 
+
+}
+
+.contactContainer .contactForm  .subjectInput input{
+    width: 100%;
+    max-width: 100%;
+    height: 4rem;
+    border-radius: 18px;
+    border: none;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    background-color: #a0bbd63f;
+    
+    
+
+}
+
+
+.contactContainer .contactForm  .messageInputValid{
+    grid-row: 4; 
+
+}
+
+.contactContainer .contactForm  .messageInputValid textarea{
+    
+    width: 100%;
+    padding-bottom: 8rem;
+    padding-top: 1rem;
+    border-radius: 12px;
+    border: none;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    background-color: #c3daf13f;
+    resize: none;
+    
+    
+
+}
+
+.contactContainer .contactForm  .messageInputValid p{
+    color: green;
+}
+
+.contactContainer .contactForm  .messageInputValid p span{
+    display: none;
+}
+
+
+.contactContainer .contactForm  .messageInputInvalid{
+    grid-row: 4; 
+
+}
+
+.contactContainer .contactForm  .messageInputInvalid textarea{
+    
+    width: 100%;
+    padding-bottom: 8rem;
+    padding-top: 1rem;
+    border-radius: 12px;
+    border: none;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    background-color: #c3daf13f;
+    resize: none;
+    scrollbar-width: none;
+    
+    
+
+}
+
+
+.contactContainer .contactForm  .messageInputInvalid p span{
+    color: red;
+}
+
+
+
+
+.contactContainer .contactForm .submitButton{
+    grid-row: 5;
+}
+
+.contactContainer .contactForm .submitButton button{
+    border: none;
+    border-radius: 14px;
+    width: 10rem;
+    height: 4rem;
+    color: #ffffff;
+    background-color: #0A66C2;
+    font-weight: 300;
+    font-size: 1rem;
+
+}
+
+
+.contactContainer .contactForm .submitButton button:hover{
+    cursor: pointer;
+}
+
+
+
+.contactContainer .contactForm .submitButtonDisabled{
+    grid-row: 5;
+}
+
+.contactContainer .contactForm .submitButtonDisabled button{
+    border: none;
+    border-radius: 14px;
+    width: 10rem;
+    height: 4rem;
+    color: #ffffff;
+    background-color: #0a4686;
+    font-weight: 300;
+    font-size: 1rem;
+
+}
+
+
+.contactContainer .contactForm .submitButtonDisabled button:hover{
+    cursor: not-allowed;
+}
+
+
+.contactContainer .contactForm .msg{
+    grid-row: 6;
+    margin-left: 0.5rem;
+}
+
+
+.contactContainer .contactForm .msg p{
+    color: red;
+}
+

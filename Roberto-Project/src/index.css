@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+:root{
+  margin: 0;
+  font-size: 75%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  grid-template-rows: auto;
+  overflow-x: hidden;
+   overflow-y: scroll;
+  scrollbar-width: none;
+  
+  height: 100vh;
+  width: 100%;
+  
+  background-color: #1f1f1f;
+}
+
+#root{
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 12rem auto;
+  
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  justify-items: center;
+  
+  
+}
+
+.activeSection{
+  
+  color: #dddbdb;
+  font-size: 100%;
+  margin: 0 auto;
+  width: 95%;
+  gap: 5rem;
+  min-height: 100vh;
+  height: auto;
+  display: grid;
+  grid-template-columns:  repeat(1, 1fr);
+  grid-template-rows: 60rem 120rem auto ;
+background-color: #1f1f1f;
+  align-items: center;
+  justify-items: center;
+
+  overflow: hidden;
+ position: relative;
+  z-index: 15;
+  font-family: 'Lato';
+ 
+ 
+  
+}
+body{
+  margin: 0;
+
+  
+
+}
+
+
+.navActiveSection{
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin: 0 auto;
+  justify-items: center;
+  position: fixed;
+  right: 35%;
+  top: 3%;
+  color: white;
+  grid-template-columns: repeat(1, 1fr);
+  display: none;
+  
+  
+  z-index: 100;
+  
+  
+
+
+
+
+}
+
+
+
+.notNavActiveSection{
+  display: none;
+  
+
+}
+
+
+
+.activeSection{
+
+  animation: fadeIn 0.5s ease-in-out;
+  
+  
+  
+  
+}
+.notActiveSection{
+  display: none;
+}
+
+
+
+.newActiveSection{
+  width: 100vw;
+  animation: fadeIn 0.5s ease-in-out;
+  overflow: hidden;
+  
+  
+
+  
+  
+  
+  
+}
+.notNewActiveSection{
+  display: none;
+}
+
+
+
+
+.homeHeader {
+    display: grid;
+    grid-template-columns: 50rem auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    width: 120rem;
+    white-space: nowrap;
+    justify-items: flex-start;
+    
+    background-color:#1f1f1f;
+    
+    position: sticky;
+    top: 0;
+    
+    z-index: 1000;
+}
+
+.noHomeHeader{
+  display: none;
+  
+}
+
+
+.homeHeader .content1{
+  display: grid;
+  grid-template-columns: 30rem auto;
+  grid-template-rows: auto;
+  align-items: center;
+
+  
+  
+
+}
+
+ .homeHeader .searchBar {
+    border: none;
+}
+ .homeHeader .searchBar input {
+    width: 24rem;
+    height: 4rem;
+    padding-left: 2rem;
+    border-radius: 15px;
+    border: none;
+    color: #8E8E8E;
+    font-weight: 400;
+    background-color: #343333;
+    animation: searchExpand 0.3s ease-in-out;
+}
+ .homeHeader .searchBar input:focus {
+    outline: none;
+}
+
+ .homeHeader .searchBar i {
+    font-size: 2.3rem;
+    position: relative;
+    right: 4rem;
+    color: white;
+    top: 0.5rem;
+}
+
+ .homeHeader .jobTitle {
+  position: relative;
+  left: 65%;
+    
+}
+
+ .homeHeader .jobTitle h1 {
+    font-size: 1.5rem;
+    opacity: 0;
+    color: white;
+    animation: fadeIn 0.3s forwards;
+    animation-delay: 0.3s;
+    font-family: "Caveat", cursive;
+}
+
+
+
+
+
+
+
+
+
+ .navigationHeader{
+    display: grid;
+    grid-template-columns: 10rem auto;
+    grid-template-rows: auto;
+    color: #8E8E8E;
+    padding: 2rem;
+    grid-column: 1;
+    border-radius: 20px;
+    border: none;
+   
+    
+   
+  
+   
+    
+    z-index: 10;
+}
+
+ .navigationHeader .imgContainer{
+    margin: 1rem;
+}
+ .navigationHeader .imgContainer img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 16px;
+}
+
+ .navigationHeader .userInformation{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2.9rem 2rem 1rem ;
+    margin-top: 0.rem;
+    
+
+
+}
+
+
+ .navigationHeader .userInformation h1{
+    font-size: 1.5rem;
+    letter-spacing: 1.6px;
+    font-weight: 400;
+    font-family: "Caveat", cursive;
+    
+}
+
+
+.navigationHeader .userInformation .institution{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+ .navigationHeader .userInformation .institution p{
+  font-weight: 400;
+  color: #9E9E9E;
+    
+}
+
+
+.navigationHeader .userInformation .email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+ .navigationHeader .userInformation .email p{
+    font-weight: 400;
+    color: #9E9E9E;
+
+}
+
+ .navigationHeader .userInformation .socialIcons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    gap: 2px;
+}
+
+ .navigationHeader .userInformation .socialIcons img{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    
+}
+
+ .navigationHeader .userInformation .socialIcons img:nth-child(1){
+    top: 0px;
+    animation-name: Levitate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+
+}
+ .navigationHeader .userInformation .socialIcons img:nth-child(2){
+    top: 0px;
+    animation-name: Levitate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.2s;
+
+}
+ .navigationHeader .userInformation .socialIcons img:nth-child(3){
+    top: 0px;
+    animation-name: Levitate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.4s;
+
+}
+.navigationHeader .userInformation .socialIcons img:nth-child(4){
+    top: 0px;
+    animation-name: Levitate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.6s;
+
+}
+
+ .navigationHeader .userInformation .socialIcons img:hover{
+    top: -4px;
+    cursor: pointer;
+
+}
+
+
+ .navigationHeader .userInformation .socialIcons img:nth-child(3){
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+ .navigationHeader .userInformation .socialIcons img:nth-child(4){
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 4px;
+}
+
+
+
+
