@@ -135,7 +135,7 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
             
             <div className={
                 styles.projectShowcase}>
-                <video src="/Images/Projects/ProjectShowcase.mp4" autoPlay muted loop></video>
+                <video src="Images/Projects/ProjectShowcase.mp4" autoPlay muted loop></video>
             </div>
 
             <div className={styles.homeContent}>
@@ -150,10 +150,10 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
                     </div>
                     
                     <div className={styles.aboutIcons}>
-                        <img src="/Images/aboutIcons/aftereffects-original.png" alt="" />
-                        <img src="/Images/aboutIcons/blender-original.png" alt="" />
-                        <img src="/Images/aboutIcons/premierepro-original.png" alt="" />
-                        <img src="/Images/aboutIcons/unity-original.png" alt="" />
+                        <img src="public/Images/aboutIcons/aftereffects-original.png" alt="" />
+                        <img src="Images/aboutIcons/blender-original.png" alt="" />
+                        <img src="Images/aboutIcons/premierepro-original.png" alt="" />
+                        <img src="Images/aboutIcons/unity-original.png" alt="" />
                         
                     </div>
                 </div>

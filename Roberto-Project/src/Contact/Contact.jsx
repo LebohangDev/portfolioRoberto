@@ -27,9 +27,9 @@ function Contact(){
         "Ndawonye"      // Zulu
     ];
     const circles = [
-        { img: '/Images/Circles/circle1.png' },
-        { img: '/Images/Circles/circle2.png' },
-        { img: '/Images/Circles/circle3.png' }
+        { img: 'Images/Circles/circle1.png' },
+        { img: 'Images/Circles/circle2.png' },
+        { img: 'Images/Circles/circle3.png' }
     ];
 
     const changeLanguage = (() =>{
@@ -233,13 +233,13 @@ function Contact(){
                 </div>
                
                 <div className={styles.contactIcons}>
-                    <img src="/Images/SocialIcons/Instagram_Icon.png" alt="" />
-                    <img src="/Images/SocialIcons/Linkden_Icon.png" alt="" />
-                    <img src="/Images/SocialIcons/TikTok_Icon.png" alt="" />
+                    <img src="Images/SocialIcons/Instagram_Icon.png" alt="" />
+                    <img src="Images/SocialIcons/Linkden_Icon.png" alt="" />
+                    <img src="Images/SocialIcons/TikTok_Icon.png" alt="" />
                     <img src="/Images/SocialIcons/Youtube_Icon.png" alt="" />
                 </div>
                 <div className={styles.projectShowcase}>
-                    <img src="/Images/Projects/Progressive-Blur.png" alt="" />
+                    <img src="Images/Projects/Progressive-Blur.png" alt="" />
                 </div>
 
 

@@ -107,7 +107,7 @@ function App() {
         <div className="content1">
           <div className="navigationHeader">
             <div className="imgContainer">
-              <img src="/Images/UserProfile/Roberto.jfif" alt="" />
+              <img src="Images/UserProfile/Roberto.jfif" alt="" />
             </div>
             <div className="userInformation">
               <h1>Roberto Fernandez Ruiz</h1>
@@ -120,10 +120,10 @@ function App() {
                 <p>etho009@outlook.es</p>
               </div>
               <div className="socialIcons">
-                <img src="/Images/SocialIcons/Instagram_Icon.png" alt="" />
-                <img src="/Images/SocialIcons/Linkden_Icon.png" alt="" />
-                <img src="/Images/SocialIcons/TikTok_Icon.png" alt="" />
-                <img src="/Images/SocialIcons/Youtube_Icon.png" alt="" />
+                <img src="Images/SocialIcons/Instagram_Icon.png" alt="" />
+                <img src="Images/SocialIcons/Linkden_Icon.png" alt="" />
+                <img src="Images/SocialIcons/TikTok_Icon.png" alt="" />
+                <img src="Images/SocialIcons/Youtube_Icon.png" alt="" />
               </div>
             </div>
           </div>

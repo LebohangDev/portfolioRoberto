@@ -9,7 +9,7 @@ function Nav({setActive, active}){
         <div className={styles.navigationContainer}>
             <div className={styles.navigationHeader}>
                 <div className={styles.imgContainer}>
-                    <img src="/Images/UserProfile/Roberto.jfif" alt="" />
+                    <img src="Images/UserProfile/Roberto.jfif" alt="" />
                 </div>
                 <div className={styles.userInformation}>
                     <h1>Roberto Fernandez Ruiz</h1>
@@ -24,10 +24,10 @@ function Nav({setActive, active}){
                     
                     
                     <div className={styles.socialIcons}>
-                        <img src="/Images/SocialIcons/Instagram_Icon.png" alt="" />
-                        <img src="/Images/SocialIcons/Linkden_Icon.png" alt="" />
-                        <img src="/Images/SocialIcons/TikTok_Icon.png" alt="" />
-                        <img src="/Images/SocialIcons/Youtube_Icon.png" alt="" />
+                        <img src="Images/SocialIcons/Instagram_Icon.png" alt="" />
+                        <img src="Images/SocialIcons/Linkden_Icon.png" alt="" />
+                        <img src="Images/SocialIcons/TikTok_Icon.png" alt="" />
+                        <img src="Images/SocialIcons/Youtube_Icon.png" alt="" />
 
                         
                     </div>
