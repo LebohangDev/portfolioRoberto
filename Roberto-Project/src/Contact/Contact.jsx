@@ -236,7 +236,7 @@ function Contact(){
                     <img src="Images/SocialIcons/Instagram_Icon.png" alt="" />
                     <img src="Images/SocialIcons/Linkden_Icon.png" alt="" />
                     <img src="Images/SocialIcons/TikTok_Icon.png" alt="" />
-                    <img src="/Images/SocialIcons/Youtube_Icon.png" alt="" />
+                    <img src="Images/SocialIcons/Youtube_Icon.png" alt="" />
                 </div>
                 <div className={styles.projectShowcase}>
                     <img src="Images/Projects/Progressive-Blur.png" alt="" />
