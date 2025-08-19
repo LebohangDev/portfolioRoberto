@@ -19,7 +19,7 @@ function App() {
   useEffect(() =>{
           async function getProjects(){
               try{
-                  const response = await fetch('http://localhost:3000/api/Portfolio/Projects',)
+                  const response = await fetch('https://portfoliorobertoserver.onrender.com/api/Portfolio/Projects',)
                   const data = await response.json()
                   setProjectData(data)
   

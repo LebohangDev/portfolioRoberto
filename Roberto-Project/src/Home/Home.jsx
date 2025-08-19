@@ -24,7 +24,7 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
     useEffect(() =>{
         async function getReviews(){
             try{
-                const response = await fetch('http://localhost:3000/api/Portfolio/Reviews',)
+                const response = await fetch('https://portfoliorobertoserver.onrender.com/api/Portfolio/Reviews',)
                 const data = await response.json();
 
                 setReviewData(data)
