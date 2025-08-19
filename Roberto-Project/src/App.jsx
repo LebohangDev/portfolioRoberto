@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react"
-import Nav from "./Nav/Nav.jsx"
+
 import Home from "./Home/Home.jsx"
 import Projects from "./Projects/Projects.jsx"
 import ProjectInspect from "./ProjectInspect/ProjectInspect.jsx";
@@ -158,49 +158,46 @@ function App() {
 
 
 
-    <div className= {navActive === 'nav1' ? 'navActiveSection' : 'notNavActiveSection'} >
-        <Nav setActive = {setActive} active={active}/>
-
-    </div>
-
       
 
     
 
 
-    <div className="content">
+   
       
     
-      <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  }>
-    
+    <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  }>
+
+      <div className="content">
+
         <Home projectData={projectData} setProjectInspectData = {setProjectInspectData} setActive = {setActive} setNavActive={setNavActive}/>
         <Projects setNavActive = {setNavActive} setActive = {setActive} projectData={projectData} setProjectInspectData = {setProjectInspectData}/>
         <Contact/>
-      
-      
-      
-      
-      
-
-    
-      
-    
 
       </div>
     
       
-
-      <div className={active === 'projectInspect' ? 'newActiveSection' : 'notNewActiveSection'  }>
-        <ProjectInspect setActive = {setActive} setNavActive={setNavActive} projectInspectData = {projectInspectData}/>
-      
-      
       
 
-      </div>
+
+    </div>
+
+
+    <div className={active === 'projectInspect' ? 'newActiveSection' : 'notNewActiveSection'  }>
+      <ProjectInspect setActive = {setActive} setNavActive={setNavActive} projectInspectData = {projectInspectData}/>
+      
+      
+      
+
+    </div>
+    
+      
+
+    
 
      
       
-    </div>
+    
     
 
    
