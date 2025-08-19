@@ -15,15 +15,16 @@
 .ProjectInspectContainer{
     display: grid;
     width: 95%;
+    max-width: 120rem;
     margin: 0 auto;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    grid-template-columns: auto;
-    grid-template-rows:  5rem 85% 1fr;
-    position: relative;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:  auto 54rem auto;
+    
     z-index: 1;
     color: white;
     gap: 2rem;
@@ -45,7 +46,7 @@
     align-items: center;
     position: sticky;
     z-index: 5;
-    top: 0;
+    top: 10px;
     
     
     
@@ -193,17 +194,15 @@
 
 .ProjectInspectContainer .projectDetails .projectDescription{
     grid-area: 1/2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 8rem auto auto;
+    gap: 1rem;
+    
    
 }
 
 
-.ProjectInspectContainer .projectDetails .projectDescription{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 4% auto auto;
-    
-    
-}
 
 
 .ProjectInspectContainer .projectDetails .projectDescription .desc p{
@@ -266,5 +265,120 @@
     object-fit: contain;
     border-radius: 5px;
 }
+
+
+
+
+@media (max-width: 767px) {
+
+    
+.ProjectInspectContainer{
+    display: grid;
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows:  auto 20rem auto;
+   
+   
+    
+}
+
+
+  
+.ProjectInspectContainer .header img{
+    width: 4rem;
+    height: 4rem;
+  
+  
+ 
+    
+    
+   
+    
+    
+}
+
+
+
+
+
+.ProjectInspectContainer .header button{
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 0.5rem;
+    
+
+    
+
+
+    
+
+}
+
+.ProjectInspectContainer .projectDetails{
+    grid-area: 3/1;
+    display: grid;
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows: auto;
+    
+    
+   
+    
+   
+
+}
+
+
+.ProjectInspectContainer .projectDetails .title{
+    grid-area: 1/1;
+    height: 100%;
+    
+    position: sticky;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.ProjectInspectContainer .projectDetails .title .projectName{
+    height: 6.7rem;
+}
+
+
+
+.ProjectInspectContainer .projectDetails .projectDescription{
+    margin-top: 6rem;
+    grid-area: 1/1;
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows: 10rem 10rem auto;
+
+
+}
+
+
+.ProjectInspectContainer .projectDetails .projectDescription .desc{
+    text-align: center;
+
+}
+
+
+.ProjectInspectContainer .projectDetails .projectDescription .collaboration{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
 
 

@@ -31,7 +31,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData}){
         <div  className={styles.ProjectInspectContainer}id="projectInspectContainer">
             <div className={styles.header}>
                 <div className={styles.imgContainer} id='imgContainer'>
-                    <img src="/Images/UserProfile/Roberto.jfif" alt="" />
+                    <img src="Images/UserProfile/Roberto.jfif" alt="" />
 
                 </div>
                 <div className={styles.button}>
