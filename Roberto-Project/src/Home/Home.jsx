@@ -150,7 +150,7 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
                     </div>
                     
                     <div className={styles.aboutIcons}>
-                        <img src="public/Images/aboutIcons/aftereffects-original.png" alt="" />
+                        <img src="Images/aboutIcons/aftereffects-original.png" alt="" />
                         <img src="Images/aboutIcons/blender-original.png" alt="" />
                         <img src="Images/aboutIcons/premierepro-original.png" alt="" />
                         <img src="Images/aboutIcons/unity-original.png" alt="" />
