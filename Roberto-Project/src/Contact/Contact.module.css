@@ -23,8 +23,8 @@
     align-content: center;
     align-items: center;
    
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: fit-content;
  
   
 }
@@ -443,3 +443,107 @@
     color: red;
 }
 
+
+
+
+
+@media (max-width: 767px) {
+
+    
+.contactContainer{
+    
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows: 40rem auto;
+    width: 95%;
+    justify-items: center;
+
+  
+ 
+  
+}
+
+.contactContainer .contactInformation{
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows: 3rem 14rem auto;
+}
+
+
+.contactContainer .contactInformation .circlesContainer{
+    margin-left: 30%;
+}
+
+
+.contactContainer .contactInformation .circlesContainer .circle:nth-child(1) img{
+    width: 3rem;
+
+
+}
+
+.contactContainer .contactInformation .circlesContainer .circle:nth-child(2) img{
+    width: 3rem;
+    left: 0;
+
+
+}
+
+.contactContainer .contactInformation .circlesContainer .circle:nth-child(3) img{
+    width: 3.5rem;
+    left: 0;
+
+
+}
+
+
+
+   
+    
+
+
+
+.contactContainer .contactInformation .title h1{
+    font-size: 2rem;
+    width: 100%;
+}
+
+
+.contactContainer .contactInformation .title span{
+    font-size: 5rem;
+    text-align: center;
+    
+}
+
+
+.contactContainer .contactInformation .contactDescription p{
+    width: 100%;
+    font-size: 1rem;
+}
+
+
+
+.contactContainer .contactInformation .contactIcons{
+    justify-self: center;
+}
+
+
+
+
+  
+.contactContainer .contactForm{
+    grid-area: 2/1 ;
+}
+
+  
+.contactContainer .contactForm form{
+    width: 25rem;
+    
+}
+
+
+
+
+    
+
+
+}

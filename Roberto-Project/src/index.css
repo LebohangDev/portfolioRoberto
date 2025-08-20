@@ -19,10 +19,13 @@
   
   font-size: 75%;
   background-color: #1f1f1f;
-  overflow: hidden;
+  color: #dddbdb;
+  
   scroll-behavior: smooth;
   height: 100vh;
+  
   width: 100%;
+  font-family: 'Lato';
   
  
 
@@ -30,11 +33,12 @@
 
 #root{
   display: grid;
-  grid-template-columns: repeat(1, 3fr) ;
-  grid-template-rows: 12rem auto;
-  overflow: hidden;
-
-
+  grid-template-columns: minmax(0, 100%);
+  grid-template-rows: 12rem 70rem 40rem auto ;
+  
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -44,39 +48,16 @@
 }
 
 .activeSection{
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scrollbar-width: none;
+  
+
+  position: relative;
+  
+ 
+
+  
+
 }
 
-.content{
-  
-  color: #dddbdb;
-  font-size: 100%;
-  margin: 0 auto;
-  width: 95%;
- 
-  
-  gap: 5rem;
-  min-height: 100vh;
-  height: auto;
-  display: grid;
-  grid-template-columns:  repeat(1, 1fr);
-  grid-template-rows: 60rem 120rem auto ;
-background-color: #1f1f1f;
-  align-items: center;
-  justify-items: center;
-
-  overflow: hidden;
- position: relative;
-  z-index: 15;
-  font-family: 'Lato';
- 
- 
-  
-}
 body{
   margin: 0;
 
@@ -157,13 +138,14 @@ body{
 
 .homeHeader {
     display: grid;
-    grid-template-columns: 50rem auto;
+    grid-template-columns: 1fr auto;
     grid-template-rows: auto;
     align-items: center;
-    width: 100%;
+    width: 95%;
+    
     max-width: 125rem;
     white-space: nowrap;
-    justify-items: flex-start;
+    justify-content: space-between;
     
     background-color:#1f1f1f;
     
@@ -182,8 +164,9 @@ body{
 .homeHeader .content1{
   display: grid;
   grid-template-columns: 30rem auto;
-  grid-template-rows: auto;
+  grid-template-rows: 10rem auto;
   align-items: center;
+  
 
   
   
@@ -192,7 +175,14 @@ body{
 
  .homeHeader .searchBar {
     border: none;
+   
 }
+
+
+ .homeHeader .MuiAutocomplete-input .MuiAutocomplete-inputFocused{
+  width: 5rem;
+
+ }
  .homeHeader .searchBar input {
     width: 24rem;
     height: 4rem;
@@ -200,6 +190,7 @@ body{
     border-radius: 15px;
     border: none;
     color: #8E8E8E;
+    
     font-weight: 400;
     background-color: #343333;
     animation: searchExpand 0.3s ease-in-out;
@@ -217,8 +208,11 @@ body{
 }
 
  .homeHeader .jobTitle {
-  position: relative;
-  left: 65%;
+  width: fit-content;
+  white-space: wrap;
+  text-align: center;
+  
+  
     
 }
 
@@ -248,12 +242,6 @@ body{
     grid-column: 1;
     border-radius: 20px;
     border: none;
-   
-    
-   
-  
-   
-    
     z-index: 10;
 }
 
@@ -385,11 +373,15 @@ body{
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   
   :root{
   
     font-size: 85%;
+  }
+
+  .activeSection{
+    width: 95%;
   }
 
 
@@ -397,6 +389,7 @@ body{
 .homeHeader {
    
     grid-template-columns: minmax(0, 100%);
+    justify-items: center;
     
     width: 95%;
     
@@ -405,11 +398,30 @@ body{
    
   }
 
+
+  
+#root{
+  
+  grid-template-rows: 12rem 60rem 90rem auto ;
+  
+  
+}
+
+    
+.homeHeader{
+  align-items: start;
+  height: 12.5rem;
+  
+}
+
     
 .homeHeader .content1{
-  grid-template-columns: repeat(1, 2fr);
+  grid-template-columns: minmax(0, 100%);
   width: 95%;
+  margin: 0 auto;
   justify-items: center;
+  align-items: start;
+  grid-template-rows: 8rem auto;
   
 }
 
@@ -483,12 +495,13 @@ body{
 
  
  .homeHeader .searchBar{
+  margin-left: 6%;
   
  }
 
  
  .homeHeader .searchBar input {
-    width: 17rem;
+    width: 14rem;
     height: 3.4rem;
     padding-left: 2rem;
     border-radius: 15px;
@@ -517,6 +530,20 @@ body{
   
 .homeHeader .jobTitle h1{
   font-size: 1.3rem;
+  
+}
+
+
+
+
+
+.content{
+  
+
+  grid-template-rows: 80rem 50rem auto ;
+
+ 
+ 
   
 }
 

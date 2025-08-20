@@ -28,7 +28,7 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData})
         <>
         <div className={styles.projectContainer} id='Projects'>
             
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 2}}>
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
                 <Masonry columnsCount={3} gutter="40px">
 
                     {projectData.map((PD, index) =>(

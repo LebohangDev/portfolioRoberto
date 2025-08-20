@@ -25,13 +25,15 @@
 
    
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: minmax(0, 100%);
     grid-template-rows: 40rem auto;
     height: 100%;
-    width: 100%;
+    width: 95%;
+    
    
     margin: 0 auto;
-    
+    justify-items: center;
+    justify-content: center;
     overflow: hidden;
     scrollbar-width: none;
     
@@ -130,7 +132,9 @@
     height: 100%;
     grid-template-columns: 50rem auto;
     grid-template-rows: auto;
-    gap: 10%;
+    justify-content: space-between;
+    
+  
     
     margin-top: 1rem;
     margin-left: 0.4rem;
@@ -336,6 +340,7 @@
     flex-wrap: nowrap;
     padding: 0.7rem;
     width: fit-content;
+    height: fit-content;
     align-items: center;
     border-radius: 25px;
     background-color: #bfbfbf60 ;
@@ -362,6 +367,127 @@
    
 }
 
+
+
+
+
+
+@media (max-width: 767px) {
+
+    .homeContainer{
+        grid-template-rows: 15rem;
+        grid-template-columns: minmax(0, 100%);
+       
+    
+
+    }
+
+   
+    
+    .homeContainer .projectShowcase video{
+
+        object-fit:cover;
+    
+
+    }
+    
+    .homeContainer .homeContent{
+        grid-template-rows: 20rem auto;
+        text-align: center;
+        height: fit-content;
+        justify-content: center;
+        
+
+       
+
+    }
+
+    
+    .homeContainer .homeContent .aboutContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .homeContainer .homeContent .aboutContainer p{
+        
+        text-align: center;
+       
+        font-size: 0.8rem;
+        width: 24rem;
+        
+    }
+
+    
+    .homeContainer .homeContent .aboutContainer .aboutIcons{
+        justify-content: center;
+        
+    }
+    
+    .homeContainer .reviewsContainer{
+        grid-area: 2/1;
+        grid-template-rows: 4rem 20rem auto;
+        margin: 0 auto;
+        
+        justify-items: center;
+        
+        
+    }
+
+     
+    .homeContainer .reviewsContainer .review .reviewText{
+        width: 24rem
+    }
+
+    
+    .homeContainer .reviewsContainer .review .reviewHeader{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem 2rem 1rem;
+        gap: 0;
+        
+        
+    }
+
+    
+    .homeContainer .reviewsContainer .review .reviewHeader .reviewProfileImg{
+        grid-area: 1/1;
+
+
+    }
+
+    .homeContainer .reviewsContainer .review .reviewHeader .reviewNameHolder{
+       grid-area: 2/1;
+
+    }
+
+      .homeContainer .reviewsContainer .review .reviewHeader .rating{
+       grid-area: 3/1;
+       justify-content: center;
+
+    }
+
+
+
+
+    
+    .homeContainer .reviewsContainer .reviewDotsContainer{
+       align-items: center;
+       left: 0%;
+        
+    }
+
+
+    
+
+    
+    
+
+
+
+}
 
 
 

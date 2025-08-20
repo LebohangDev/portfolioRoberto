@@ -128,7 +128,7 @@ function App() {
             </div>
           </div>
           {/* Stack is a Layout Component to arrange child components */}
-          <Stack spacing={2} sx={{ width: "36%" }}>
+          <Stack spacing={2} sx={{ width: 230 }}>
             <Autocomplete
               className="searchBar"
               ref={textInputRef}
@@ -167,14 +167,10 @@ function App() {
       
     
     <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  }>
-
-      <div className="content">
-
         <Home projectData={projectData} setProjectInspectData = {setProjectInspectData} setActive = {setActive} setNavActive={setNavActive}/>
         <Projects setNavActive = {setNavActive} setActive = {setActive} projectData={projectData} setProjectInspectData = {setProjectInspectData}/>
         <Contact/>
 
-      </div>
     
       
       
