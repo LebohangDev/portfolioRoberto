@@ -395,21 +395,130 @@ body{
 
   
 .homeHeader {
-    display: grid;
+   
     grid-template-columns: minmax(0, 100%);
-    grid-template-rows: 1fr;
-    align-items: center;
-    width: 100%;
-    max-width: 120rem;
-    white-space: nowrap;
-    justify-items: flex-start;
     
-    background-color:#1f1f1f;
+    width: 95%;
     
-    position: sticky;
-    top: 0;
     
-    z-index: 1000;
+   
+   
   }
+
+    
+.homeHeader .content1{
+  grid-template-columns: repeat(1, 2fr);
+  width: 95%;
+  justify-items: center;
+  
+}
+
+
+.homeHeader .content1 .navigationHeader {
+  grid-template-columns: 6rem auto;
+  padding: 0;
+  width: fit-content;
+
+}
+
+
+.homeHeader .content1 .navigationHeader .imgContainer{
+  width: fit-content;
+  height: fit-content;
+}
+
+.homeHeader .content1 .navigationHeader .imgContainer img{
+  width: 4rem ;
+  height: 4rem;
+
+
+}
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation{
+  grid-template-rows: 2.3rem 2rem 1rem ;
+}
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation h1{
+  font-size: 1.2rem;
+  margin-bottom: 0;
+
+}
+
+
+.homeHeader .content1 .navigationHeader .userInformation .institution p, .email p{
+  font-size: 0.8rem ;
+}
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation .institution i, .email i{
+  font-size: 0.8rem ;
+}
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation .socialIcons img{
+
+  width: 1.9rem ;
+  height: 1.9rem;
+}
+
+
+.homeHeader .content1 .navigationHeader .userInformation .socialIcons img:nth-child(3){
+  width: 1.65rem ;
+  height: 1.65rem;
+}
+
+.homeHeader .content1 .navigationHeader .userInformation .socialIcons img:nth-child(4){
+  width: 1.65rem ;
+  height: 1.65rem;
+}
+
+
+
+
+ 
+ .homeHeader .searchBar{
+  
+ }
+
+ 
+ .homeHeader .searchBar input {
+    width: 17rem;
+    height: 3.4rem;
+    padding-left: 2rem;
+    border-radius: 15px;
+    border: none;
+ }
+
+
+.MuiStack-root.css-17pwghc-MuiStack-root{
+  align-items: center;
+  width: fit-content;
+
+}
+   
+.homeHeader .jobTitle{
+  grid-area: 2/2;
+  white-space: wrap;
+  text-align: center;
+   width: 10rem;
+   display: none;
+ 
+  left: 0;
+  
+  
+}
+
+  
+.homeHeader .jobTitle h1{
+  font-size: 1.3rem;
+  
+}
+
   
 }
