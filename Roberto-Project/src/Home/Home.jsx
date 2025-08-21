@@ -135,7 +135,7 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
             
             <div className={
                 styles.projectShowcase}>
-                <video src="Images/Projects/ProjectShowcase.mp4" autoPlay muted loop></video>
+                <video src="Images/Projects/ProjectShowcase.mp4"  autoPlay muted loop playsInline controls={false} controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture aria-hidden="true"></video>
             </div>
 
             <div className={styles.homeContent}>
