@@ -35,8 +35,8 @@
   display: grid;
   grid-template-columns: minmax(0, 100%);
   grid-template-rows: auto ;
-  overflow: none;
-  scrollbar-width: smooth;
+  overflow: hidden;
+  
 
   scrollbar-width: none;
   width: 100%;
