@@ -2,15 +2,21 @@
 import styles from './ProjectInspect.module.css';
 import { useState, useEffect } from "react"
 
-function ProjectInspect({setNavActive, setActive, projectInspectData}){
+function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
     const [rect, setRect] = useState(0)
+
+
+    useEffect( () =>{
+
+        const projectInspectWindow = document.getElementById('projectInspectContainer')
+        projectInspectWindow.scrollTo(0, 0)
+
+    }, [active])
 
     
 
 
-    const getScrollPosition = (container) =>{
-
-    }
+   
 
     useEffect(() => {
         let img = document.getElementById('imgContainer')
@@ -28,7 +34,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData}){
     return(
         <>
         
-        <div  className={styles.ProjectInspectContainer}id="projectInspectContainer">
+        <div  className={styles.ProjectInspectContainer} id="projectInspectContainer">
             <div className={styles.header}>
                 <div className={styles.imgContainer} id='imgContainer'>
                     <img src="Images/UserProfile/Roberto.jfif" alt="" />

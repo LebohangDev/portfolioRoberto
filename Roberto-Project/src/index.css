@@ -23,6 +23,7 @@
   
   overflow: hidden;
   height: 100vh;
+  justify-items: center;
 
   width: 100%;
   font-family: 'Lato';
@@ -36,6 +37,7 @@
   grid-template-columns: minmax(0, 100%);
   grid-template-rows: auto ;
   overflow: hidden;
+      
   
 
   scrollbar-width: none;
@@ -51,14 +53,15 @@
   
 
   position: relative;
-  overflow: hidden;
+    overflow-x: hidden;
+  overflow-y: scroll;
 
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-template-rows: 63rem 50rem auto ;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  grid-template-rows: 63rem 55rem 60rem ;
+ 
   scrollbar-width: smooth;
+  animation: fadeIn 0.5s ease-in-out;
 
   scrollbar-width: none;
   width: 100%;
@@ -114,14 +117,6 @@ body{
 
 
 
-.activeSection{
-
-  animation: fadeIn 0.5s ease-in-out;
-  
-  
-  
-  
-}
 .notActiveSection{
   display: none;
 }
@@ -143,6 +138,8 @@ body{
   
   
 }
+
+
 .notNewActiveSection{
   display: none;
 }
@@ -156,6 +153,7 @@ body{
     grid-template-rows: auto;
     align-items: center;
     width: 95%;
+    padding-top: 2rem;
     
     max-width: 125rem;
     white-space: nowrap;
@@ -198,7 +196,7 @@ body{
 
  }
  .homeHeader .searchBar input {
-    width: 24rem;
+    width: 100%;
     height: 4rem;
     padding-left: 2rem;
     border-radius: 15px;
@@ -252,7 +250,7 @@ body{
     grid-template-columns: 10rem auto;
     grid-template-rows: auto;
     color: #8E8E8E;
-    padding: 2rem;
+    
     grid-column: 1;
     border-radius: 20px;
     border: none;
@@ -387,7 +385,7 @@ body{
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   
   :root{
   
@@ -404,7 +402,8 @@ body{
    
     grid-template-columns: minmax(0, 100%);
     justify-items: center;
-    
+    align-items: start;
+    height: 12.5rem;
     width: 95%;
     
     
@@ -416,17 +415,12 @@ body{
   
 .activeSection{
   
-  grid-template-rows: 65rem 130rem 100rem auto;
+  grid-template-rows: 40rem 140rem 100rem auto;
   
   
 }
 
-    
-.homeHeader{
-  align-items: start;
-  height: 12.5rem;
-  
-}
+
 
     
 .homeHeader .content1{
@@ -563,3 +557,127 @@ body{
 
   
 }
+
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  :root{
+  
+    font-size: 85%;
+  }
+
+  .activeSection{
+  
+  grid-template-rows: 65rem 70rem 100rem auto;
+  gap: 10rem;
+  
+  
+}
+
+
+
+      
+.homeHeader{
+  align-items: center;
+  grid-template-columns: 42rem auto;
+  grid-template-rows: 7rem auto;
+  height: 8rem;
+  
+  
+}
+
+
+
+    
+.homeHeader .content1{
+  grid-template-columns: 22rem auto;
+
+}
+
+
+
+
+.homeHeader .content1 .navigationHeader{
+  grid-template-columns: 8rem auto;
+}
+
+
+.homeHeader .content1 .navigationHeader .imgContainer{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.homeHeader .content1 .navigationHeader .imgContainer img{
+  width: 7rem ;
+  height: 7rem;
+
+
+}
+
+
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation{
+  grid-template-rows: 2.3rem 2rem 1rem;
+}
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation h1{
+  font-size: 1.3rem;
+  margin-bottom: 0;
+
+}
+
+
+.homeHeader .content1 .navigationHeader .userInformation .institution p, .email p{
+  font-size: 0.9rem ;
+}
+
+
+
+.homeHeader .content1 .navigationHeader .userInformation .institution i, .email i{
+  font-size: 0.9rem ;
+}
+
+  
+.homeHeader .content1 .searchBar input{
+  
+}
+
+      
+.homeHeader .jobTitle{
+  grid-area: 1/2;
+}
+
+    
+.homeHeader .jobTitle h1{
+  font-size: 1.3rem;
+}
+
+
+
+
+
+}
+
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1180px)
+  and (orientation: landscape){
+
+    
+  .activeSection{
+  
+  grid-template-rows: 60rem 40rem 50rem auto;
+  gap: 20%;
+  
+  
+}
+
+  }

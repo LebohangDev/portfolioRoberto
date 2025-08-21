@@ -23,7 +23,6 @@
     scrollbar-width: none;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows:  auto 54rem auto;
-    
     z-index: 1000;
     color: white;
     gap: 2rem;
@@ -375,6 +374,33 @@
 
 
 
+
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .ProjectInspectContainer{
+    display: grid;
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows:  auto 40rem auto;
+   
+   
+    
+}
+
+
+
+.ProjectInspectContainer .projectDetails .projectDescription .collaboration{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    
+}
 
 }
 
