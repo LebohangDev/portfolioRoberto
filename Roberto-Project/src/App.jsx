@@ -94,6 +94,11 @@ function App() {
     handleSearch(searchResult)
 
   }, [searchResult])
+
+  useEffect( () =>{
+    window.scrollTo(0, 0)
+
+  }, [active])
     
       
 

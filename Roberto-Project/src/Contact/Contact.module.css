@@ -13,7 +13,7 @@
 
 .contactContainer{
     display: grid;
-    grid-template-columns: 70rem auto;
+    grid-template-columns: 80rem auto;
     
     
     grid-template-rows: 70rem;

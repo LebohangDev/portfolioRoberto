@@ -21,9 +21,9 @@
   background-color: #1f1f1f;
   color: #dddbdb;
   
-  scroll-behavior: smooth;
+  overflow: hidden;
   height: 100vh;
-  
+
   width: 100%;
   font-family: 'Lato';
   
@@ -34,10 +34,10 @@
 #root{
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-template-rows: 12rem 70rem 40rem auto ;
-  
-  overflow-x: hidden;
-  overflow-y: scroll;
+  grid-template-rows: auto ;
+  overflow: none;
+  scrollbar-width: smooth;
+
   scrollbar-width: none;
   width: 100%;
   height: 100vh;
@@ -51,6 +51,20 @@
   
 
   position: relative;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
+  grid-template-rows: 63rem 50rem auto ;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: smooth;
+
+  scrollbar-width: none;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  justify-items: center;
   
  
 
@@ -400,9 +414,9 @@ body{
 
 
   
-#root{
+.activeSection{
   
-  grid-template-rows: 12rem 60rem 90rem auto ;
+  grid-template-rows: 60rem 130rem 100rem auto;
   
   
 }
