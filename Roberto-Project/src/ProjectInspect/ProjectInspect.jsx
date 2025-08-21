@@ -42,7 +42,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData}){
             </div>
            
             <div className={styles.projectVideo}>
-                <video src={projectInspectData.video} autoPlay muted loop alt="" />
+                <video src={projectInspectData.video} autoPlay muted loop playsInline controls={false} controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture aria-hidden="true" alt="" />
                    
             </div>
             <div className={styles.projectDetails}>

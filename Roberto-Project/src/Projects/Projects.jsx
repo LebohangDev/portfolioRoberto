@@ -39,7 +39,7 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData})
                           viewport={{amount: 0.2, once: false}}
                           transition={{delay: index * 0.1}}>
                             <div className={styles.ProjectImg} key={index} >
-                                <video src={PD.video} autoPlay muted loop alt="" onClick={(e) => {e.preventDefault(), setNavActive(false), setActive('projectInspect'), setProjectInspectData(PD)}} />
+                                <video src={PD.video}  autoPlay muted loop playsInline controls={false} controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture aria-hidden="true" alt="" onClick={(e) => {e.preventDefault(), setNavActive(false), setActive('projectInspect'), setProjectInspectData(PD)}} />
 
                                 <div className={styles.title}>
                                     <h1>{PD.name}</h1>
