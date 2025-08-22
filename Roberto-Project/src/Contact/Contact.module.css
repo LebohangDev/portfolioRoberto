@@ -13,17 +13,17 @@
 
 .contactContainer{
     display: grid;
-    grid-template-columns:repeat(1, 2fr);
+    grid-template-columns: 50rem auto;
     
     
     grid-template-rows: auto;
     margin: 0 auto;
     justify-items: start;
-    
+    justify-content: space-between;
     align-content: center;
     align-items: center;
    
-    width: 95%;
+    width: 100%;
     height: fit-content;
  
   
@@ -121,8 +121,8 @@
     font-size: 1.3rem;
     color:#777777;
     transition: 0.3s ease-in-out;
-    width: 56rem;
-    flex-wrap: wrap;
+    
+
 }
 
 
@@ -194,7 +194,7 @@
     grid-template-rows: 5rem 5rem 5rem 14rem 3rem auto;
     border: none;
     border-radius: 20px;
-    width: 40rem;
+    width: fit-content;
     height: 90%;
     box-sizing: border-box;
     background-color: #ffffff04;
@@ -466,7 +466,7 @@
     text-align: center;
     justify-content: center;
     grid-template-columns: minmax(0, 100%);
-    grid-template-rows: 3rem 14rem auto;
+    grid-template-rows: 3rem 16rem auto;
 }
 
 
@@ -557,7 +557,7 @@
     
     grid-template-columns: minmax(0, 100%);
     grid-template-rows: 30rem auto;
-    width: 95%;
+    width: 100%;
     justify-items: center;
 
   

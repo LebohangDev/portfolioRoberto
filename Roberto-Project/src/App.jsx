@@ -1,5 +1,5 @@
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, use } from "react"
 
 import Home from "./Home/Home.jsx"
 import Projects from "./Projects/Projects.jsx"
@@ -16,7 +16,7 @@ function App() {
   const [projectInspectData, setProjectInspectData] = useState([{}])
     const [searchResult, setSearchResult] = useState('')
     const textInputRef = useRef(null) // setting ref to get text input form search input avoid dom delays
-
+   
     
   useEffect(() =>{
           async function getProjects(){
@@ -59,6 +59,7 @@ function App() {
 
   useEffect(() =>{
     const searchBar = textInputRef.current
+    console.log("",textInputRef.current.value)
     console.log("searchBar:", searchBar)
         
 
@@ -73,8 +74,17 @@ function App() {
 
       }
 
+      
+
+      
+
 
     })
+    
+
+
+
+    
 
        
     searchBar.addEventListener('keydown', handleKey)
@@ -104,6 +114,10 @@ function App() {
         activeSectionWindow.scrollTo(0, 0)
 
     }, [active])
+
+
+
+   
 
 
     
@@ -153,7 +167,7 @@ function App() {
                     placeholder="search for a Project"
                     {...params.inputProps}
                   />
-                  <i className="ri-search-line"></i>
+                  <i className="ri-search-line" ></i>
                 </div>
               )}
             />

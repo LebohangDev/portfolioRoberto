@@ -28,7 +28,7 @@
     grid-template-columns: minmax(0, 100%);
     grid-template-rows: 40rem auto;
     height: 100%;
-    width: 95%;
+    width: 100%;
     
    
     margin: 0 auto;
@@ -132,7 +132,9 @@
     height: 100%;
     grid-template-columns: 50rem auto;
     grid-template-rows: auto;
-    justify-content: space-between;
+
+    gap: 3%;
+  
     
   
     
@@ -160,7 +162,7 @@
     line-height: 20px;
     font-size: 1rem ;
     color: #777777 ;
-    width: 50rem;
+   
 }
 
 
@@ -204,6 +206,7 @@
     transition: 0.5s ease-in-out;
     grid-column: 2;
     width: 100%;
+    
    
     height: 100%;
     
@@ -219,7 +222,7 @@
 
 .homeContainer .reviewsContainer .review{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: 3rem auto;
     align-items: start;
     gap: 2rem;
@@ -230,23 +233,18 @@
 .homeContainer .reviewsContainer .review .reviewText{
     letter-spacing: 1px;
     line-height: 1.5rem;
-    width: 50rem;
+   
     
     
 }
 
 
 
-.homeContainer .reviewsContainer .review .reviewHeader{
-    display: grid;
-    grid-template-columns: repeat(1, 3fr);
-    grid-template-rows: auto;
-}
 
 
 .homeContainer .reviewsContainer .review .reviewHeader{
     display: grid;
-    grid-template-columns: 5rem 60% auto;
+    grid-template-columns: 5rem 25rem auto;
     grid-template-rows: auto;
     align-items: center;
     gap: 2rem;
@@ -517,6 +515,7 @@
 
       .homeContainer .homeContent{
         grid-template-rows: 20rem auto;
+        
         text-align: center;
         height: fit-content;
         justify-content: center;
@@ -558,8 +557,22 @@
         
     }
 
+
 }
 
+
+ 
+@media (min-width: 1024px) and (max-width: 1180px) {
+
+    
+.homeContainer .homeContent{
+  
+    grid-template-columns: 37rem auto;
+   
+}
+    
+
+}
 
 
 
