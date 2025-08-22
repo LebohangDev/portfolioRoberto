@@ -111,7 +111,15 @@ function App() {
   useEffect( () =>{
 
         const activeSectionWindow = document.getElementById('activeSection')
-        activeSectionWindow.scrollTo(0, 0)
+
+        if(activeSectionWindow){
+          setTimeout(() =>{
+
+             activeSectionWindow.scrollTop = 0;
+
+          }, 5)
+        }
+       
 
     }, [active])
 

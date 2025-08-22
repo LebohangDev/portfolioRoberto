@@ -135,7 +135,6 @@
 
     gap: 3%;
   
-    
   
     
     margin-top: 1rem;
@@ -233,10 +232,13 @@
 .homeContainer .reviewsContainer .review .reviewText{
     letter-spacing: 1px;
     line-height: 1.5rem;
+    
    
     
     
 }
+
+
 
 
 

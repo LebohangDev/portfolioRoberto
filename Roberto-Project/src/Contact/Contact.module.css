@@ -466,7 +466,7 @@
     text-align: center;
     justify-content: center;
     grid-template-columns: minmax(0, 100%);
-    grid-template-rows: 3rem 16rem auto;
+    grid-template-rows: 3rem 1rem auto;
 }
 
 
