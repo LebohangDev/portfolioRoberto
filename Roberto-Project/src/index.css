@@ -55,13 +55,13 @@
   position: relative;
     overflow-x: hidden;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 
   display: grid;
   grid-template-columns: minmax(0, 100%);
   grid-template-rows: 55rem 62rem 60rem ;
  
-  scrollbar-width: smooth;
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 
   scrollbar-width: none;
   width: 95%;

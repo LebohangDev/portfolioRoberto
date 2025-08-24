@@ -118,7 +118,7 @@ function App() {
 
              activeSectionRef.current.scrollTop = 0;
 
-          }, 5)
+          }, 200)
         }
        
 
