@@ -208,10 +208,6 @@
 
 
 
-.homeContainer .iconsContainer .icons img:hover{
-
-}
-
 
 .homeContainer .iconsContainer .icons .iconImg:nth-child(1){
     grid-area: 1/1;
@@ -509,9 +505,6 @@
 
 
 
-.homeContainer .iconsContainer .icons img:hover{
-
-}
 
 
 .homeContainer .iconsContainer .icons .iconImg:nth-child(1){
@@ -687,10 +680,6 @@
 }
 
 
-
-.homeContainer .iconsContainer .icons img:hover{
-
-}
 
 
 .homeContainer .iconsContainer .icons .iconImg:nth-child(1){
