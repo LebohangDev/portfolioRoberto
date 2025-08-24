@@ -113,13 +113,13 @@ function App() {
 
         
 
-        if(activeSectionRef.current){
-          setTimeout(() =>{
+   
+        
 
              activeSectionRef.current.scrollTop = 0;
 
-          }, 200)
-        }
+
+      
        
 
     }, [active])
