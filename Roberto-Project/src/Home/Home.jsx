@@ -1,12 +1,25 @@
 import {useEffect, useState } from "react"
 import styles from "./Home.module.css"
+import { AnimatePresence, motion} from "framer-motion";
 
 
 
 
 
 
-function Home({projectData, setProjectInspectData, setActive, setNavActive}){
+function Home(){
+
+
+    const Icons = [{img: 'Images/aboutIcons/Houdini.png'},
+                   {img: 'Images/aboutIcons/Blender.png'},
+                   {img: 'Images/aboutIcons/Davinci.png'},
+                   {img: 'Images/aboutIcons/Gaea.png'},
+                   {img: 'Images/aboutIcons/Maya.png'},
+                   {img: 'Images/aboutIcons/Nuke.png'},
+                   {img: 'Images/aboutIcons/RenderMan.png'}
+                   
+                   
+                ]
 
    
 
@@ -145,19 +158,46 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
 
                     </div>
                     <div className={styles.aboutDesc}>
+                        
                         <p>I’m <span>Roberto Fernandez</span>, a dedicated student at ArtFX, where I’m developing my skills in cinematography and 3D/FX artistry. I have a deep passion for visual storytelling and enjoy pushing my creative boundaries to craft immersive and captivating cinematic experiences. With a focus on blending technical precision and artistic vision, I’m committed to mastering my craft and making my mark in the world of digital arts and filmmaking</p>
 
                     </div>
                     
-                    <div className={styles.aboutIcons}>
-                        <img src="Images/aboutIcons/aftereffects-original.png" alt="" />
-                        <img src="Images/aboutIcons/blender-original.png" alt="" />
-                        <img src="Images/aboutIcons/premierepro-original.png" alt="" />
-                        <img src="Images/aboutIcons/unity-original.png" alt="" />
-                        
-                    </div>
+                  
                 </div>
-                <div className={styles.reviewsContainer}>
+
+                <div className={styles.iconsContainer}>
+                    <div className={styles.iconsTitle}>
+                        <h1>Pipeline</h1>
+
+                    </div>
+                    <div className={styles.icons}>
+                        {Icons.map((I, index) =>(
+
+                            <motion.div
+                            key={index}
+                            initial={{opacity: 0, scale: 0}}
+                            whileInView={{opacity: 1, scale: 1}}
+                            viewport={{amount: 0.2, once: false}}
+                          
+                            className={styles.iconImg}
+                            transition={{type: "spring", visualDuration: 0.4, bounce: 0.5, delay: index * 0.1}}>
+
+                                 <img key={index} src={I.img} alt="" />
+
+
+                            </motion.div>
+                            
+                            
+                        ))}
+                       
+                       
+
+                    </div>
+                       
+                        
+                </div>
+                {/*<div className={styles.reviewsContainer}>
                     <div className={styles.reviewsTitle}>
                         <h1>Reviews</h1>
 
@@ -212,7 +252,7 @@ function Home({projectData, setProjectInspectData, setActive, setNavActive}){
                         
 
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
         </>

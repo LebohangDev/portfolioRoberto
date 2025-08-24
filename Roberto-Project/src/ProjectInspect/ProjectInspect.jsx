@@ -1,35 +1,36 @@
 
 import styles from './ProjectInspect.module.css';
-import { useState, useEffect } from "react"
+import { useState, useEffect, use } from "react"
 
 function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
     const [rect, setRect] = useState(0)
+    const [showcaseData, setShowcaseData] = useState([{}])
 
 
     useEffect( () =>{
 
         const projectInspectWindow = document.getElementById('projectInspectContainer')
         projectInspectWindow.scrollTo(0, 0)
+        setShowcaseData(projectInspectData?.showcase?.length)
+        
+       
+        
 
     }, [active])
 
     
 
+   
+        
+
 
    
 
     useEffect(() => {
-        let img = document.getElementById('imgContainer')
-        let container = document.getElementById('projectInspectContainer')
       
-        
-
-        setRect() 
-        console.log()
-        
        
 
-    }, )
+    }, [projectInspectData] )
 
     return(
         <>
@@ -90,16 +91,21 @@ function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
                         </div>
                         
                     </div>
-                    <div className={styles.projectShowcase}>
-                        {projectInspectData.showcase?.map((s, index) =>(
-                            <div className={styles.projectIMG} key={index}>
-                                <img src={s} alt="" />
+                    {showcaseData >= 1 ? 
+                        <div className={styles.projectShowcase}>
+                            {projectInspectData.showcase?.map((s, index) =>(
+                                <div className={styles.projectIMG} key={index}>
+                                    <img src={s} alt="" />
                                 
                             
-                            </div>
-                        ))}
+                                </div>
+                            ))}
                         
-                    </div>
+                        </div>
+                    
+                    
+                    : null}
+                   
                 </div>
             </div>
         </div>

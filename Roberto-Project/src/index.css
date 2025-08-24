@@ -58,7 +58,7 @@
 
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-template-rows: 63rem 55rem 60rem ;
+  grid-template-rows: 55rem 62rem 60rem ;
  
   scrollbar-width: smooth;
   animation: fadeIn 0.5s ease-in-out;
@@ -415,7 +415,7 @@ body{
   
 .activeSection{
   
-  grid-template-rows: 40rem 140rem 100rem auto;
+  grid-template-rows: 70rem 155rem 100rem;
   
   
 }
@@ -570,8 +570,9 @@ body{
 
   .activeSection{
   
-  grid-template-rows: 65rem 65rem 100rem;
-  gap: 10rem;
+  grid-template-rows: 70rem 74rem 100rem;
+ 
+  
   
   
 }
@@ -674,10 +675,24 @@ body{
     
   .activeSection{
   
-  grid-template-rows: 60rem 40rem 80rem auto;
+  grid-template-rows: 50rem 40rem 80rem auto;
   gap: 20%;
   
   
 }
 
-  }
+}
+
+
+
+@media (min-width: 1300px) {
+
+
+  .activeSection{
+  
+  
+  width: 100%;
+  
+}
+
+}
