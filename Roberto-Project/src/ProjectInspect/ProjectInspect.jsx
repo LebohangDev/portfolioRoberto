@@ -1,16 +1,17 @@
 
 import styles from './ProjectInspect.module.css';
-import { useState, useEffect, use } from "react"
+import { useState, useEffect, useRef } from "react"
 
 function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
     const [rect, setRect] = useState(0)
     const [showcaseData, setShowcaseData] = useState([{}])
+    const projectInspectRef = useRef(null)
 
 
     useEffect( () =>{
 
-        const projectInspectWindow = document.getElementById('projectInspectContainer')
-        projectInspectWindow.scrollTo(0, 0)
+       
+        projectInspectRef.current.scrollTop = 0;
         setShowcaseData(projectInspectData?.showcase?.length)
         
        
@@ -35,7 +36,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
     return(
         <>
         
-        <div  className={styles.ProjectInspectContainer} id="projectInspectContainer">
+        <div  className={styles.ProjectInspectContainer} ref={projectInspectRef}>
             <div className={styles.header}>
                 <div className={styles.imgContainer} id='imgContainer'>
                     <img src="Images/UserProfile/Roberto.jfif" alt="" />

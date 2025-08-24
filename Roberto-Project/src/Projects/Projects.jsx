@@ -14,14 +14,14 @@ import styles from './Projects.module.css';
 function Projects({setNavActive, setActive, projectData, setProjectInspectData}){
     
 
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
 
 
     useEffect(() =>{
-        if(isLoading === true){
+        
             const interval = setInterval(() =>{
                 if ( projectData.length >= 0){
-                    setIsLoading(false)
+                   
                     console.log("isLoading:", isLoading)
                 }else(
                     setIsLoading(true)
@@ -31,7 +31,7 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData})
 
         return () => clearInterval(interval);
 
-        }
+        
        
 
       

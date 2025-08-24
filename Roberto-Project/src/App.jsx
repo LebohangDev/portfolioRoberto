@@ -16,6 +16,7 @@ function App() {
   const [projectInspectData, setProjectInspectData] = useState([{}])
     const [searchResult, setSearchResult] = useState('')
     const textInputRef = useRef(null) // setting ref to get text input form search input avoid dom delays
+    const activeSectionRef = useRef(null)
    
     
   useEffect(() =>{
@@ -110,12 +111,12 @@ function App() {
 
   useEffect( () =>{
 
-        const activeSectionWindow = document.getElementById('activeSection')
+        
 
-        if(activeSectionWindow){
+        if(activeSectionRef.current){
           setTimeout(() =>{
 
-             activeSectionWindow.scrollTop = 0;
+             activeSectionRef.current.scrollTop = 0;
 
           }, 5)
         }
@@ -200,7 +201,7 @@ function App() {
    
       
     
-    <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  } id="activeSection">
+    <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  } ref={activeSectionRef}>
         <Home projectData={projectData} setProjectInspectData = {setProjectInspectData} setActive = {setActive} setNavActive={setNavActive}/>
         <Projects setNavActive = {setNavActive} setActive = {setActive} projectData={projectData} setProjectInspectData = {setProjectInspectData}/>
         <Contact/>
