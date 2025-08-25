@@ -181,7 +181,7 @@ function Home(){
                             viewport={{amount: 0.2, once: false}}
                           
                             className={styles.iconImg}
-                            transition={{type: "spring", visualDuration: 0.4, bounce: 0.5, delay: index * 0.1}}>
+                            transition={{type: "spring", visualDuration: 0.2, bounce: 0.5, delay: index * 0.1}}>
 
                                  <img key={index} src={I.img} alt="" />
 
