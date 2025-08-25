@@ -11,7 +11,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData}){
     useEffect( () =>{
 
        
-        
+        projectInspectRef.current.scrollTop = 0;
         setShowcaseData(projectInspectData?.showcase?.length)
         
        

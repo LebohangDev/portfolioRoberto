@@ -204,7 +204,7 @@ function App() {
       
     
     <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  } ref={activeSectionRef}>
-        <Home projectData={projectData} setProjectInspectData = {setProjectInspectData} setActive = {setActive} setNavActive={setNavActive}/>
+        <Home projectData={projectData} setProjectInspectData = {setProjectInspectData} setActive = {setActive} setNavActive={setNavActive} />
         <Projects setNavActive = {setNavActive} setActive = {setActive} projectData={projectData} setProjectInspectData = {setProjectInspectData} isLoading = {isLoading} setIsLoading = {setIsLoading}/>
         <Contact/>
 
@@ -216,8 +216,8 @@ function App() {
     </div>
 
 
-    <div className={active === 'projectInspect' ? 'newActiveSection' : 'notNewActiveSection'  } id="projectInspect">
-      <ProjectInspect setActive = {setActive} setNavActive={setNavActive} projectInspectData = {projectInspectData} active = {active} isLoading = {isLoading} setIsLoading = {setIsLoading}/>
+    <div className={active === 'projectInspect' ? 'newActiveSection' : 'notNewActiveSection'  } id="projectInspect" >
+      <ProjectInspect setActive = {setActive} setNavActive={setNavActive} projectInspectData = {projectInspectData} active = {active} />
       
       
       
