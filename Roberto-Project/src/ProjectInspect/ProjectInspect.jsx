@@ -2,7 +2,7 @@
 import styles from './ProjectInspect.module.css';
 import { useState, useEffect, useRef } from "react"
 
-function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
+function ProjectInspect({setNavActive, setActive, projectInspectData}){
     const [rect, setRect] = useState(0)
     const [showcaseData, setShowcaseData] = useState([{}])
     const projectInspectRef = useRef(null)
@@ -11,7 +11,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
     useEffect( () =>{
 
        
-        projectInspectRef.current.scrollTop = 0;
+        
         setShowcaseData(projectInspectData?.showcase?.length)
         
        
