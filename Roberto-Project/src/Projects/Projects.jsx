@@ -20,12 +20,19 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData})
     useEffect(() =>{
         
            
-        if ( projectData.length > 1 ||  projectData.length >= 0 ){
-            console.log("isLoading:", isLoading)
+        if ( projectData.length >= 1){
+            console.log("isLoadingFalse:", isLoading)
             setIsLoading(false)
-        }else(
+        }else{
+
+            console.log("isLoadingTrue:", isLoading)
             setIsLoading(true)
-        )
+        
+
+        }
+            
+           
+        
 
 
 
