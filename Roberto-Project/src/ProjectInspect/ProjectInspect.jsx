@@ -17,7 +17,7 @@ function ProjectInspect({setNavActive, setActive, projectInspectData, active}){
        
         
 
-    }, [active])
+    }, [projectInspectData])
 
     
 

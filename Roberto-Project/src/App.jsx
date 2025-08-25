@@ -13,10 +13,12 @@ function App() {
   const [active, setActive] = useState('home')
   const [navActive, setNavActive] = useState(true)
   const [projectData, setProjectData] = useState([])
-  const [projectInspectData, setProjectInspectData] = useState([{}])
+  const [projectInspectData, setProjectInspectData] = useState([])
     const [searchResult, setSearchResult] = useState('')
+    const [isLoading, setIsLoading] = useState(true)
     const textInputRef = useRef(null) // setting ref to get text input form search input avoid dom delays
     const activeSectionRef = useRef(null)
+    
    
     
   useEffect(() =>{
@@ -203,7 +205,7 @@ function App() {
     
     <div className={active === 'home' ? 'activeSection' : 'notActiveSection'  } ref={activeSectionRef}>
         <Home projectData={projectData} setProjectInspectData = {setProjectInspectData} setActive = {setActive} setNavActive={setNavActive}/>
-        <Projects setNavActive = {setNavActive} setActive = {setActive} projectData={projectData} setProjectInspectData = {setProjectInspectData}/>
+        <Projects setNavActive = {setNavActive} setActive = {setActive} projectData={projectData} setProjectInspectData = {setProjectInspectData} isLoading = {isLoading} setIsLoading = {setIsLoading}/>
         <Contact/>
 
     
@@ -215,7 +217,7 @@ function App() {
 
 
     <div className={active === 'projectInspect' ? 'newActiveSection' : 'notNewActiveSection'  } id="projectInspect">
-      <ProjectInspect setActive = {setActive} setNavActive={setNavActive} projectInspectData = {projectInspectData} active = {active}/>
+      <ProjectInspect setActive = {setActive} setNavActive={setNavActive} projectInspectData = {projectInspectData} active = {active} isLoading = {isLoading} setIsLoading = {setIsLoading}/>
       
       
       

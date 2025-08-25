@@ -153,8 +153,7 @@ body{
     grid-template-rows: auto;
     align-items: center;
     width: 95%;
-    padding-top: 2rem;
-    
+   
     max-width: 125rem;
     white-space: nowrap;
     justify-content: space-between;

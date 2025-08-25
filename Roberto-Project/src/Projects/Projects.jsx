@@ -11,10 +11,10 @@ import styles from './Projects.module.css';
 
 
 
-function Projects({setNavActive, setActive, projectData, setProjectInspectData}){
+function Projects({setNavActive, setActive, projectData, setProjectInspectData, setIsLoading, isLoading}){
     
 
-    const [isLoading, setIsLoading] = useState(true)
+    
 
 
     useEffect(() =>{
@@ -32,7 +32,7 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData})
 
         }
 
-        },  8000)
+        },  3000)
 
 
         return () => clearInterval(Interval)
