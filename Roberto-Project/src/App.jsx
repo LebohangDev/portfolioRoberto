@@ -12,7 +12,7 @@ function App() {
 
   const [active, setActive] = useState('home')
   const [navActive, setNavActive] = useState(true)
-  const [projectData, setProjectData] = useState([{}])
+  const [projectData, setProjectData] = useState([])
   const [projectInspectData, setProjectInspectData] = useState([{}])
     const [searchResult, setSearchResult] = useState('')
     const textInputRef = useRef(null) // setting ref to get text input form search input avoid dom delays
