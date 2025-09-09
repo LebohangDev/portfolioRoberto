@@ -12,6 +12,8 @@ import styles from './Projects.module.css';
 
 
 function Projects({setNavActive, setActive, projectData, setProjectInspectData, setIsLoading, isLoading}){
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     
 
     
@@ -43,6 +45,40 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData, 
     }, [projectData])
 
 
+    async function deleteProject(project){
+
+        let projectName = project.name
+        try{
+            const response = await fetch(`http://localhost:3000/api/Portfolio/Projects/${projectName}`,{
+
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+
+            })
+
+            if(!response.ok){
+                 throw new error(`http error! status: ${response.status},`)
+                
+
+            }
+
+        
+
+            console.log("succcesfully deleted", project, "project!")
+
+
+
+            
+
+        }catch(e){
+
+        }
+
+    }
+
+
     const emptyGridArray = [{img: "Images/Projects/noProjects/empty-grid1.png"},
                             {img: "Images/Projects/noProjects/empty-grid2.png"},
                             {img: "Images/Projects/noProjects/empty-grid3.png"},
@@ -66,10 +102,10 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData, 
         <>
 
        
-            <div className={styles.projectContainer} id='Projects'>
+           
             
-                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 950: 3}}>
-                    <Masonry columnsCount={3} gutter="40px">
+                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 950: 3}} gutter="40px" style={{ width: '100%' }} >
+                    <Masonry>
 
                         {isLoading === true ? emptyGridArray.map((EG, index) =>(
                             <motion.div
@@ -102,8 +138,20 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData, 
                                 viewport={{amount: 0.2, once: false}}
                                 transition={{delay: index * 0.1}}>
                                     <div className={styles.ProjectImg} key={index} >
-                                        <video src={PD.video}  autoPlay muted loop playsInline controls={false} controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture aria-hidden="true" alt="" onClick={(e) => {e.preventDefault(), setNavActive(false), setActive('projectInspect'), setProjectInspectData(PD)}} />
+                                        {/*<button onClick={(e) =>{e.preventDefault(), deleteProject(PD)}}>Delete</button>*/}
 
+                                       
+
+                                        <video src={PD.video}  allow="autoplay; fullscreen" allowFullScreen onClick={(e) => {e.preventDefault(), setNavActive(false), setActive('projectInspect'), setProjectInspectData(PD)}}></video>
+
+                                        
+
+                                      
+
+                                            
+
+                                       
+                                        
                                         <div className={styles.title}>
                                             <h1>{PD.name}</h1>
                                             <div className={styles.tags}>
@@ -141,8 +189,7 @@ function Projects({setNavActive, setActive, projectData, setProjectInspectData, 
             
                 </ResponsiveMasonry>
 
-            </div>
-        
+           
         
         
 

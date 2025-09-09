@@ -148,7 +148,7 @@ function Home(){
             
             <div className={
                 styles.projectShowcase}>
-                <video src="Images/Projects/ProjectShowcase.mp4"  autoPlay muted loop playsInline controls={false} controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture aria-hidden="true"></video>
+                <iframe src="https://player.vimeo.com/video/1089309338?autoplay=1&muted=1&loop=1&background=1" allow="autoplay; fullscreen" allowFullScreen ></iframe>
             </div>
 
             <div className={styles.homeContent}>

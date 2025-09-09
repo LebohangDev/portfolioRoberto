@@ -60,7 +60,7 @@
 
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-template-rows: 55rem 62rem 60rem ;
+  grid-template-rows: 76rem 62rem 60rem ;
  
   scrollbar-width: smooth;
 

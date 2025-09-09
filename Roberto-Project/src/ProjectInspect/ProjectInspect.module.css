@@ -75,6 +75,9 @@
 
 
 
+
+
+
 .ProjectInspectContainer .header button{
     width: 7rem;
     height: 3.5rem;
@@ -117,15 +120,17 @@
     grid-area: 2/1;
 }
 
-.ProjectInspectContainer .projectVideo video{
-    border-radius: 5px;
-    object-fit: cover;
+.ProjectInspectContainer .projectVideo iframe{
+     margin-top: 1rem;
+    
     width: 100%;
-    height: 100%;
-   
+    height: 50rem;
     opacity: 0;
+  
+    border: none;
+    object-fit: cover;
     animation: fadeIn 0.3s forwards;
-    animation-delay:  0.3s;
+    animation-delay: 0.5s;
     
     
 }
