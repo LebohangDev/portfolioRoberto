@@ -233,10 +233,9 @@ function Contact(){
                 </div>
                
                 <div className={styles.contactIcons}>
-                    <img src="Images/SocialIcons/Instagram_Icon.png" alt="" />
-                    <img src="Images/SocialIcons/Linkden_Icon.png" alt="" />
-                    <img src="Images/SocialIcons/TikTok_Icon.png" alt="" />
-                    <img src="Images/SocialIcons/Youtube_Icon.png" alt="" />
+                    <img src="Images/SocialIcons/Instagram_Icon.png" onClick={() => window.open('https://www.instagram.com/roberto_fernaandez/')} alt="" />
+                    <img src="Images/SocialIcons/Linkden_Icon.png" onClick={() => window.open('https://www.linkedin.com/in/roberto-fernandez-ruiz-2892ba31b/')} alt="" />
+                    <img src="Images/SocialIcons/Youtube_Icon.png" onClick={() => window.open('https://www.youtube.com/@23.98frames')} alt="" />
                 </div>
                 <div className={styles.projectShowcase}>
                     <img src="Images/Projects/Progressive-Blur.png" alt="" />
